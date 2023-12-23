@@ -102,7 +102,7 @@ mount_openapi <- function(pr, api_url) {
         api_url <- req$HTTP_REFERER
         api_url <- sub("(\\?.*)?$", "", api_url)
         api_url <- sub("index\\.html$", "", api_url)
-        api_url <- sub("__docs__/$", "", api_url)
+        api_url <- sub("docs/$", "", api_url)
       }
     }
 
@@ -155,7 +155,7 @@ unmount_openapi <- function(pr) {
 #'       api_path = paste0(
 #'         "window.location.origin + ",
 #'         "window.location.pathname.replace(",
-#'           "/\\(__docs__\\\\/|__docs__\\\\/index.html\\)$/, \"\"",
+#'           "/\\(docs\\\\/|docs\\\\/index.html\\)$/, \"\"",
 #'         ") + ",
 #'         "\"openapi.json\""
 #'       ),
@@ -184,7 +184,7 @@ register_docs <- function(name, index, static = NULL) {
   stopifnot(is.function(index))
   if (!is.null(static)) stopifnot(is.function(static))
 
-  docs_root <- paste0("/__docs__/")
+  docs_root <- paste0("/docs/")
   docs_paths <- c("/index.html", "/")
   mount_docs_func <- function(pr, api_url, ...) {
     # Save initial extra argument values
@@ -272,8 +272,8 @@ swagger_redirects <- function() {
     )
   }
   list(
-    "/__swagger__/" = to_route("../__docs__/"),
-    "/__swagger__/index.html"  = to_route("../__docs__/index.html")
+    "/__swagger__/" = to_route("../docs/"),
+    "/__swagger__/index.html"  = to_route("../docs/index.html")
   )
 }
 
