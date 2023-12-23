@@ -130,7 +130,7 @@ pr_set_debug <- function(pr, debug = interactive()) {
 #' `docs` should be either a logical or a character value matching a registered visual documentation.
 #' Multiple handles will be added to [`Plumber`] object. OpenAPI json
 #' file will be served on paths `/openapi.json`. Documentation
-#' will be served on paths `/__docs__/index.html` and `/__docs__/`.
+#' will be served on paths `/docs/index.html` and `/docs/`.
 #'
 #' @template param_pr
 
