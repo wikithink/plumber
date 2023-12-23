@@ -41,7 +41,7 @@
 #' When `NULL`, secret is not validated. Otherwise, Plumber compares secret with http header
 #' `PLUMBER_SHARED_SECRET`. Failure to match results in http error 400. Defaults to `NULL`.}
 #' \item{`plumber.legacyRedirects`}{Plumber will redirect legacy route `/__swagger__/` and
-#' `/__swagger__/index.html` to `../__docs__/` and `../__docs__/index.html`. You can disable this
+#' `/__swagger__/index.html` to `../docs/` and `../docs/index.html`. You can disable this
 #' by settings this option to `FALSE`. Defaults to `TRUE`}
 #' }
 #'
