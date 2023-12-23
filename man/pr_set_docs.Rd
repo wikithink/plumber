@@ -21,7 +21,7 @@ The Plumber router with the new docs settings.
 \code{docs} should be either a logical or a character value matching a registered visual documentation.
 Multiple handles will be added to \code{\link{Plumber}} object. OpenAPI json
 file will be served on paths \verb{/openapi.json}. Documentation
-will be served on paths \verb{/docs/index.html} and \verb{/docs/}.
+will be served on paths \verb{/__docs__/index.html} and \verb{/__docs__/}.
 }
 \examples{
 \dontrun{
